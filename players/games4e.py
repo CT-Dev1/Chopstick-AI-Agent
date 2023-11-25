@@ -421,7 +421,7 @@ class TicTacToe(Game):
         if move not in state.moves:
             return state  # Illegal move has no effect
         board = state.board.copy()
-        board[move] = state.to_move
+        board[move] = state.to_move #changes the board
         moves = list(state.moves)
         moves.remove(move)
         return GameState(to_move=('O' if state.to_move == 'X' else 'X'),
